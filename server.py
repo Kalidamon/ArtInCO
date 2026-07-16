@@ -268,6 +268,12 @@ def download_mp3():
                     'key': 'FFmpegMetadata',
                 },
             ],
+            'extractor_args': {
+                'youtube': {
+                    # Intenta forzar que se comporte como un cliente de Android o TV
+                    'player_client': ['android', 'ios'], 
+                }
+            },
             'quiet': False,
             'no_warnings': False,
             'ffmpeg_location': ffmpeg_dir,
