@@ -245,7 +245,7 @@ def download_mp3():
         external_downloader = shutil.which("aria2c")
         ydl_opts = {
             'format': 'bestaudio/best',
-            'cookiefile': 'cookies.txt'
+            'cookiefile': 'cookies.txt',
             'nocheckcertificate': True,
             'geo_bypass': True,
             'check_formats': True, 
