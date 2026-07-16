@@ -1,0 +1,18 @@
+# render.yaml (opcional) — configuración para crear el servicio en Render desde infra-as-code
+services:
+  - type: web
+    name: ytdl-flask-api    # cambialo por el nombre que prefieras
+    env: docker
+    region: oregon          # cambia si quieres otra región
+    branch: main            # rama del repo que Render desplegará
+    dockerfilePath: Dockerfile
+    plan: free
+    buildCommand: null
+    startCommand: null
+    envVars:
+      - key: SECRET_KEY
+        value: "REPLACE_WITH_A_STRONG_SECRET"
+      - key: FLASK_DEBUG
+        value: "0"
+      - key: PORT
+        value: "5001"
