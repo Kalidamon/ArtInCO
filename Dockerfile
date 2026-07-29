@@ -38,4 +38,4 @@ COPY . /app
 EXPOSE 5001
 
 # Ejecutar con gunicorn (server:app es el módulo Flask que expones)
-CMD exec gunicorn server:app --bind 0.0.0.0:$PORT --workers 4 --threads 2 --timeout 120
+CMD exec gunicorn server:app --bind 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 120
